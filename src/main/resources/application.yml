@@ -1,0 +1,18 @@
+server:
+  port: ${PORT:8082}
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    url: ${JDBC_DATABASE_URL:jdbc:mysql://localhost:3306/web-planer-db?createDatabaseIfNotExist=true}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${JDBC_DATABASE_USERNAME:root}
+    password: ${JDBC_DATABASE_PASSWORD:sANTJAGA-19833}
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
